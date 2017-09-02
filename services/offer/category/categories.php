@@ -23,7 +23,8 @@
           $categoryItem = array(
             'id' => "$category",
             'orderId' => "$metadata->order",
-            'name' => "$metadata->name"
+            'name' => "$metadata->name",
+            'icon' => getResPath() . '/' . getIconsPath() . '/' . "$metadata->icon"
           );
           array_push($categoryList, $categoryItem);
         }
