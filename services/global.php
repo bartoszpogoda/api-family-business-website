@@ -5,6 +5,7 @@ $CFG_BASE_WWW_PATH = $_SERVER['DOCUMENT_ROOT'] . '/';
 $CFG_RESOURCE_PATH = '/res';
 
 $CFG_CATEGORIES_PATH = 'res/oferta-items';
+$CFG_ALBUMS_PATH = 'res/photos';
 $CFG_ICONS_PATH = 'thumbs';
 
 
@@ -19,11 +20,18 @@ function getXMLMetadata($itemPath) {
 }
 
 function validateRequestParams($paramsArray) {
-
   foreach ($paramsArray as $param) {
-    if(!isset($_GET[$param]) || empty($_GET[$param])) {
+    if(!isset($_GET[$param])) {
       return false;
     }
+  }
+
+  return true;
+}
+
+function hasOptionalParam($param) {
+  if(!isset($_GET[$param])) {
+    return false;
   }
 
   return true;
@@ -56,6 +64,11 @@ function getResPath() {
 function getCategoriesPath() {
   global $CFG_CATEGORIES_PATH;
   return $CFG_CATEGORIES_PATH;
+}
+
+function getAlbumsPath() {
+  global $CFG_ALBUMS_PATH;
+  return $CFG_ALBUMS_PATH;
 }
 
 function getIconsPath() {
