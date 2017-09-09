@@ -6,6 +6,8 @@ $CFG_RESOURCE_PATH = '/res';
 
 $CFG_CATEGORIES_PATH = 'res/oferta-items';
 $CFG_ALBUMS_PATH = 'res/photos';
+$CFG_USERS_PATH = 'res/users';
+$CFG_SESSIONS_PATH = 'res/sessions';
 $CFG_ICONS_PATH = 'thumbs';
 
 
@@ -74,6 +76,16 @@ function getAlbumsPath() {
 function getIconsPath() {
   global $CFG_ICONS_PATH;
   return $CFG_ICONS_PATH;
+}
+
+function getUsersPath() {
+  global $CFG_USERS_PATH;
+  return $CFG_USERS_PATH;
+}
+
+function getSessionsPath() {
+  global $CFG_SESSIONS_PATH;
+  return $CFG_SESSIONS_PATH;
 }
 
 ?>
