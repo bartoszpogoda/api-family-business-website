@@ -1,4 +1,7 @@
 <?php
+// PROD
+error_reporting(0);
+
 // CONFIG
 $CFG_BASE_WWW_PATH = $_SERVER['DOCUMENT_ROOT'] . '/';
 
