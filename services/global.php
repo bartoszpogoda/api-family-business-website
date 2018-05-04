@@ -53,6 +53,10 @@ function throwErrorJSON($code = 400, $message = "") {
   die();
 }
 
+function setJsonResponseTypeHeader() {
+  header('Content-Type: application/json');
+}
+
 function omitXMLExt($path) {
   return str_replace (".xml" , "" , $path);
 }

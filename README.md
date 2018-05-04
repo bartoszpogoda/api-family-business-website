@@ -13,9 +13,21 @@ REST API for my family business website project. (o) Parameters are optional
 
 | No.	| Purpose | URL | Method | Format	| Params | Impl |
 | --- | --- | --- | --- | --- | --- | --- |
-1|Gets array of album objects|/album/albums.php|GET|JSON|start, length (o)| yes
-2|Gets array of photos objects|/album/photo/photos.php|GET|JSON|albumId, startId, endId (o)| no
+1|Gets array of album objects|/gallery/getAlbums.php|GET|JSON|start, length (o)| yes
+2|Gets specific album object along with photo urls|/gallery/getAlbum.php|GET|JSON|albumId| yes
 3|Generate thumbnails if they don't exist (or force)|/album/photo/generateThumbnails.php|POST|JSON|force| no
+
+## Mailing API
+
+| No.	| Purpose | URL | Method | Format	| Params | Impl |
+| --- | --- | --- | --- | --- | --- | --- |
+1|Send an email|/mailing/postCustomerMail.php|POST|JSON|name, email, content (request body)| yes
+
+## Reviews API
+
+| No.	| Purpose | URL | Method | Format	| Params | Impl |
+| --- | --- | --- | --- | --- | --- | --- |
+1|Gets array of review objects|/reviews/getReviews.php|GET|JSON|start, length (o)| yes
 
 ## Session API
 

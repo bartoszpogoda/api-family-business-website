@@ -8,6 +8,8 @@
   /* REQUEST PARAMS */
   $paramStart = 'start';
   $paramLength = 'length';
+  
+  setJsonResponseTypeHeader();
 
   if(hasOptionalParam($paramStart)) {
     $start = $_GET[$paramStart];
